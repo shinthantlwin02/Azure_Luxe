@@ -1,0 +1,9 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "allowJs": true,  // Include JS files
+      "checkJs": false  // Skip TS checking for JS
+    },
+    "include": ["src"]
+  }
+  

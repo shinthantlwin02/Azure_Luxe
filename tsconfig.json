@@ -1,0 +1,17 @@
+{
+    "files": [],
+    "references": [
+      {
+        "path": "./tsconfig.app.json"
+      }
+    ],
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["./src/*"]
+      },
+      "allowJs": true,  // Allows JavaScript files
+      "checkJs": false  // Disables TypeScript checking on JavaScript files
+    }
+  }
+  
