@@ -413,3 +413,31 @@ export const amenities = [
     icon: '/icons/circle-parking.svg',
   },
 ];
+
+export const faqData = [
+  {
+    question: "What is the check-in and check-out time?",
+    answer: "Check-in starts at 3:00 PM, and check-out is until 11:00 AM."
+  },
+  {
+    question: "Is parking available at the hotel?",
+    answer: "Yes, we offer free on-site parking for our guests."
+  },
+  {
+    question: "Are pets allowed at the hotel?",
+    answer: "We allow small pets with prior arrangements and an additional cleaning fee."
+  },
+  {
+    question: "Do you have a cancellation policy?",
+    answer: "Cancellations made 48 hours before the arrival date are free of charge. After that, the first night will be charged."
+  },
+  {
+    question: "Does the hotel have a restaurant?",
+    answer: "Yes, we have a restaurant that serves breakfast, lunch, and dinner with a variety of cuisines."
+  },
+  {
+    question: "Is there a swimming pool?",
+    answer: "Yes, our hotel has an outdoor swimming pool open from 8:00 AM to 8:00 PM."
+  }
+];
+

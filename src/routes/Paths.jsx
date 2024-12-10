@@ -4,6 +4,7 @@ import Rooms from '@/pages/Rooms';
 import Login from '@/pages/Auth/Login';
 import Signup from '@/pages/Auth/Signup';
 import RoomDetail from '@/pages/RoomDetail';
+import Contact from '@/pages/Contact';
 
 const Paths = () => {
   return (
@@ -11,6 +12,7 @@ const Paths = () => {
       <Route index element={<Home />} />
       <Route path='/rooms' element={<Rooms />} />
       <Route path='/rooms/detail/:id' element={<RoomDetail />} />
+      <Route path='/contact' element={<Contact />}/>
 
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Signup />} />
