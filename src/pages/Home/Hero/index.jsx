@@ -2,6 +2,7 @@ import { motion as m } from 'framer-motion';
 import Button from '../../../components/Button';
 import Navbar from '../../../components/Navbar';
 import ReservationBar from '../../../components/ReservationBar';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -232,10 +233,12 @@ const Hero = () => {
           </m.p>
 
           <div className='flex gap-6 justify-center'>
-            <Button
-              text='view rooms'
-              className='bg-transparent text-[#BDA16B] border border-[#BDA16B] text-sm font-raleway font-semibold uppercase'
-            />
+            <Link to={`/rooms`}>
+              <Button
+                text='view rooms'
+                className='bg-transparent text-[#BDA16B] border border-[#BDA16B] text-sm font-raleway font-semibold uppercase'
+              />
+            </Link>
             <Button
               text='book now'
               className='bg-[#BDA16B] text-[#0C2A44] text-sm font-raleway font-semibold uppercase'
