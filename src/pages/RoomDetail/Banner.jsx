@@ -1,5 +1,6 @@
 import Button from '@/components/Button';
 import { rooms } from '@/data/data';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   const room = rooms.find((room) => room.title === 'Superior Room');
@@ -45,9 +46,11 @@ const Banner = () => {
             text='Book Now'
             className='font-raleway text-sm text-[#1A1A1A] bg-[#BDA16B] rounded-none'
           />
-          <Button className='font-raleway text-sm text-[#1A1A1A] bg-transparent flex items-center gap-2'>
-            View Details <img src='/icons/chevron-right.svg' />
-          </Button>
+          <Link to={`/rooms/detail/${room.id}`}>
+            <Button className='font-raleway text-sm text-[#1A1A1A] bg-transparent flex items-center gap-2'>
+              View Details <img src='/icons/chevron-right.svg' />
+            </Button>
+          </Link>
         </div>
       </div>
 

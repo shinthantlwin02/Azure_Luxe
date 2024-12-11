@@ -1,0 +1,8 @@
+.carousel {
+  cursor: grab;
+  overflow: scroll;
+}
+
+.items {
+  pointer-events: none;
+}

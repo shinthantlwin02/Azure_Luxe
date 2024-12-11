@@ -1,7 +1,8 @@
 import Hero from './Hero';
 import About from './About';
-import Footer from '@/components/Footer';
 import WhatWeOffer from './WhatWeOffer';
+import Location from './Location';
+import Review from './Review';
 
 const Home = () => {
   return (
@@ -9,7 +10,8 @@ const Home = () => {
       <Hero />
       <About />
       <WhatWeOffer />
-      <Footer />
+      <Location />
+      <Review />
     </div>
   );
 };

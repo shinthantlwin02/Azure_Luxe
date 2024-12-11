@@ -1,6 +1,5 @@
 import { motion as m } from 'framer-motion';
 import Button from '../../../components/Button';
-import Navbar from '../../../components/Navbar';
 import ReservationBar from '../../../components/ReservationBar';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +7,6 @@ const Hero = () => {
   return (
     <div className="bg-[url('/images/hero-background.png')] h-screen">
       <div className='bg-[#1E1E1E]/[.70] h-screen relative'>
-        <Navbar />
         <div className='flex flex-col items-center justify-center h-full pt-20'>
           {/* stars with transition */}
           <div className='flex gap-4 justify-center mb-4'>

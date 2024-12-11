@@ -12,7 +12,7 @@ const Paths = () => {
       <Route index element={<Home />} />
       <Route path='/rooms' element={<Rooms />} />
       <Route path='/rooms/detail/:id' element={<RoomDetail />} />
-      <Route path='/contact' element={<Contact />}/>
+      <Route path='/contact' element={<Contact />} />
 
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Signup />} />

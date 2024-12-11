@@ -1,7 +1,7 @@
 export const rooms = [
   {
     id: 1,
-    title:'family room',
+    title: 'family room',
     description: (
       <>
         <p className='mb-4'>
@@ -31,38 +31,38 @@ export const rooms = [
     },
     amenities: [
       {
-        title:'Wifi & Internet',
-        icon:'/icons/wifi2.svg'
+        title: 'Wifi & Internet',
+        icon: '/icons/wifi2.svg',
       },
       {
-        title:'Air Conditioner',
-        icon:'/icons/aircon.svg'
+        title: 'Air Conditioner',
+        icon: '/icons/aircon.svg',
       },
       {
-        title:'Cable TV',
-        icon:'/icons/tv.svg'
+        title: 'Cable TV',
+        icon: '/icons/tv.svg',
       },
       {
-        title:'Breakfast in Bed',
-        icon:'/icons/food.svg'
+        title: 'Breakfast in Bed',
+        icon: '/icons/food.svg',
       },
       {
-        title:'Laundry Service',
-        icon:'/icons/washing-machine2.svg'
+        title: 'Laundry Service',
+        icon: '/icons/washing-machine2.svg',
       },
       {
-        title:'Espresso Machine',
-        icon:'/icons/coffee.svg'
+        title: 'Espresso Machine',
+        icon: '/icons/coffee.svg',
       },
       {
-        title:'Safe Box',
-        icon:'/icons/vault.svg'
+        title: 'Safe Box',
+        icon: '/icons/vault.svg',
       },
       {
-        title:'Housekeeper Services',
-        icon:'/icons/hand-heart2.svg'
-      }
-    ]
+        title: 'Housekeeper Services',
+        icon: '/icons/hand-heart2.svg',
+      },
+    ],
   },
   {
     id: 2,
@@ -96,38 +96,38 @@ export const rooms = [
     },
     amenities: [
       {
-        title:'Wifi & Internet',
-        icon:'/icons/wifi2.svg'
+        title: 'Wifi & Internet',
+        icon: '/icons/wifi2.svg',
       },
       {
-        title:'Air Conditioner',
-        icon:'/icons/aircon.svg'
+        title: 'Air Conditioner',
+        icon: '/icons/aircon.svg',
       },
       {
-        title:'Cable TV',
-        icon:'/icons/tv.svg'
+        title: 'Cable TV',
+        icon: '/icons/tv.svg',
       },
       {
-        title:'Breakfast in Bed',
-        icon:'/icons/food.svg'
+        title: 'Breakfast in Bed',
+        icon: '/icons/food.svg',
       },
       {
-        title:'Laundry Service',
-        icon:'/icons/washing-machine2.svg'
+        title: 'Laundry Service',
+        icon: '/icons/washing-machine2.svg',
       },
       {
-        title:'Espresso Machine',
-        icon:'/icons/coffee.svg'
+        title: 'Espresso Machine',
+        icon: '/icons/coffee.svg',
       },
       {
-        title:'Safe Box',
-        icon:'/icons/vault.svg'
+        title: 'Safe Box',
+        icon: '/icons/vault.svg',
       },
       {
-        title:'Housekeeper Services',
-        icon:'/icons/hand-heart2.svg'
-      }
-    ]
+        title: 'Housekeeper Services',
+        icon: '/icons/hand-heart2.svg',
+      },
+    ],
   },
   {
     id: 3,
@@ -161,30 +161,30 @@ export const rooms = [
     },
     amenities: [
       {
-        title:'Wifi & Internet',
-        icon:'/icons/wifi2.svg'
+        title: 'Wifi & Internet',
+        icon: '/icons/wifi2.svg',
       },
       {
-        title:'Air Conditioner',
-        icon:'/icons/aircon.svg'
+        title: 'Air Conditioner',
+        icon: '/icons/aircon.svg',
       },
       {
-        title:'Cable TV',
-        icon:'/icons/tv.svg'
+        title: 'Cable TV',
+        icon: '/icons/tv.svg',
       },
       {
-        title:'Breakfast in Bed',
-        icon:'/icons/food.svg'
+        title: 'Breakfast in Bed',
+        icon: '/icons/food.svg',
       },
       {
-        title:'Laundry Service',
-        icon:'/icons/washing-machine2.svg'
+        title: 'Laundry Service',
+        icon: '/icons/washing-machine2.svg',
       },
       {
-        title:'Housekeeper Services',
-        icon:'/icons/hand-heart2.svg'
-      }
-    ]
+        title: 'Housekeeper Services',
+        icon: '/icons/hand-heart2.svg',
+      },
+    ],
   },
   {
     id: 4,
@@ -218,34 +218,34 @@ export const rooms = [
     },
     amenities: [
       {
-        title:'Wifi & Internet',
-        icon:'/icons/wifi2.svg'
+        title: 'Wifi & Internet',
+        icon: '/icons/wifi2.svg',
       },
       {
-        title:'Air Conditioner',
-        icon:'/icons/aircon.svg'
+        title: 'Air Conditioner',
+        icon: '/icons/aircon.svg',
       },
       {
-        title:'Cable TV',
-        icon:'/icons/tv.svg'
+        title: 'Cable TV',
+        icon: '/icons/tv.svg',
       },
       {
-        title:'Breakfast in Bed',
-        icon:'/icons/food.svg'
+        title: 'Breakfast in Bed',
+        icon: '/icons/food.svg',
       },
       {
-        title:'Laundry Service',
-        icon:'/icons/washing-machine2.svg'
+        title: 'Laundry Service',
+        icon: '/icons/washing-machine2.svg',
       },
       {
-        title:'Espresso Machine',
-        icon:'/icons/coffee.svg'
+        title: 'Espresso Machine',
+        icon: '/icons/coffee.svg',
       },
       {
-        title:'Housekeeper Services',
-        icon:'/icons/hand-heart2.svg'
-      }
-    ]
+        title: 'Housekeeper Services',
+        icon: '/icons/hand-heart2.svg',
+      },
+    ],
   },
   {
     id: 5,
@@ -279,38 +279,38 @@ export const rooms = [
     },
     amenities: [
       {
-        title:'Wifi & Internet',
-        icon:'/icons/wifi2.svg'
+        title: 'Wifi & Internet',
+        icon: '/icons/wifi2.svg',
       },
       {
-        title:'Air Conditioner',
-        icon:'/icons/aircon.svg'
+        title: 'Air Conditioner',
+        icon: '/icons/aircon.svg',
       },
       {
-        title:'Cable TV',
-        icon:'/icons/tv.svg'
+        title: 'Cable TV',
+        icon: '/icons/tv.svg',
       },
       {
-        title:'Breakfast in Bed',
-        icon:'/icons/food.svg'
+        title: 'Breakfast in Bed',
+        icon: '/icons/food.svg',
       },
       {
-        title:'Laundry Service',
-        icon:'/icons/washing-machine2.svg'
+        title: 'Laundry Service',
+        icon: '/icons/washing-machine2.svg',
       },
       {
-        title:'Espresso Machine',
-        icon:'/icons/coffee.svg'
+        title: 'Espresso Machine',
+        icon: '/icons/coffee.svg',
       },
       {
-        title:'Safe Box',
-        icon:'/icons/vault.svg'
+        title: 'Safe Box',
+        icon: '/icons/vault.svg',
       },
       {
-        title:'Housekeeper Services',
-        icon:'/icons/hand-heart2.svg'
-      }
-    ]
+        title: 'Housekeeper Services',
+        icon: '/icons/hand-heart2.svg',
+      },
+    ],
   },
   {
     id: 6,
@@ -344,38 +344,38 @@ export const rooms = [
     },
     amenities: [
       {
-        title:'Wifi & Internet',
-        icon:'/icons/wifi2.svg'
+        title: 'Wifi & Internet',
+        icon: '/icons/wifi2.svg',
       },
       {
-        title:'Air Conditioner',
-        icon:'/icons/aircon.svg'
+        title: 'Air Conditioner',
+        icon: '/icons/aircon.svg',
       },
       {
-        title:'Cable TV',
-        icon:'/icons/tv.svg'
+        title: 'Cable TV',
+        icon: '/icons/tv.svg',
       },
       {
-        title:'Breakfast in Bed',
-        icon:'/icons/food.svg'
+        title: 'Breakfast in Bed',
+        icon: '/icons/food.svg',
       },
       {
-        title:'Laundry Service',
-        icon:'/icons/washing-machine2.svg'
+        title: 'Laundry Service',
+        icon: '/icons/washing-machine2.svg',
       },
       {
-        title:'Espresso Machine',
-        icon:'/icons/coffee.svg'
+        title: 'Espresso Machine',
+        icon: '/icons/coffee.svg',
       },
       {
-        title:'Safe Box',
-        icon:'/icons/vault.svg'
+        title: 'Safe Box',
+        icon: '/icons/vault.svg',
       },
       {
-        title:'Housekeeper Services',
-        icon:'/icons/hand-heart2.svg'
-      }
-    ]
+        title: 'Housekeeper Services',
+        icon: '/icons/hand-heart2.svg',
+      },
+    ],
   },
 ];
 
@@ -416,28 +416,64 @@ export const amenities = [
 
 export const faqData = [
   {
-    question: "What is the check-in and check-out time?",
-    answer: "Check-in starts at 3:00 PM, and check-out is until 11:00 AM."
+    question: 'What is the check-in and check-out time?',
+    answer: 'Check-in starts at 3:00 PM, and check-out is until 11:00 AM.',
   },
   {
-    question: "Is parking available at the hotel?",
-    answer: "Yes, we offer free on-site parking for our guests."
+    question: 'Is parking available at the hotel?',
+    answer: 'Yes, we offer free on-site parking for our guests.',
   },
   {
-    question: "Are pets allowed at the hotel?",
-    answer: "We allow small pets with prior arrangements and an additional cleaning fee."
+    question: 'Are pets allowed at the hotel?',
+    answer:
+      'We allow small pets with prior arrangements and an additional cleaning fee.',
   },
   {
-    question: "Do you have a cancellation policy?",
-    answer: "Cancellations made 48 hours before the arrival date are free of charge. After that, the first night will be charged."
+    question: 'Do you have a cancellation policy?',
+    answer:
+      'Cancellations made 48 hours before the arrival date are free of charge. After that, the first night will be charged.',
   },
   {
-    question: "Does the hotel have a restaurant?",
-    answer: "Yes, we have a restaurant that serves breakfast, lunch, and dinner with a variety of cuisines."
+    question: 'Does the hotel have a restaurant?',
+    answer:
+      'Yes, we have a restaurant that serves breakfast, lunch, and dinner with a variety of cuisines.',
   },
   {
-    question: "Is there a swimming pool?",
-    answer: "Yes, our hotel has an outdoor swimming pool open from 8:00 AM to 8:00 PM."
-  }
+    question: 'Is there a swimming pool?',
+    answer:
+      'Yes, our hotel has an outdoor swimming pool open from 8:00 AM to 8:00 PM.',
+  },
 ];
 
+export const reviews = [
+  {
+    reviewer: 'John Doe',
+    review:
+      'Azure Luxe is a true gem! The location on Shin Saw Pu Road is perfect—close enough to explore the city yet peaceful enough for a retreat. The infinity pool was my favorite spot, offering a serene escape with stunning views. Highly recommend it for anyone looking for a luxurious getaway',
+    rating: 5,
+  },
+  {
+    reviewer: 'Emma Brown',
+    review:
+      'The view from the room was breathtaking, and the service was exceptional. Highly recommend!',
+    rating: 4,
+  },
+  {
+    reviewer: 'David Smith',
+    review:
+      'Azure Luxe is a true gem! The location on Shin Saw Pu Road is perfect—close enough to explore the city yet peaceful enough for a retreat. The infinity pool was my favorite spot, offering a serene escape with stunning views. Highly recommend it for anyone looking for a luxurious getaway',
+    rating: 5,
+  },
+  {
+    reviewer: 'Sophia Lee',
+    review:
+      'Cozy and peaceful stay. Loved the outdoor activities and the delicious local cuisine.',
+    rating: 5,
+  },
+  {
+    reviewer: 'Michael Johnson',
+    review:
+      'Affordable and convenient for a short stay. The amenities were basic but sufficient.',
+    rating: 4,
+  },
+];

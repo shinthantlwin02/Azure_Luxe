@@ -1,6 +1,6 @@
 const WhatWeOffer = () => {
   return (
-    <div className='py-10'>
+    <div id="services" className='py-10'>
       <h1 className='text-center font-cinzel text-[#1A1A1A] text-4xl'>
         What We Offer
       </h1>
