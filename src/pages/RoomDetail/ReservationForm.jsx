@@ -8,6 +8,26 @@ const ReservationForm = () => {
         Reservation
       </h1>
       <form type='submit' className='flex flex-col items-center'>
+        <div className='mb-2 w-[250px]'>
+          <label htmlFor='name' className='mb-1'>
+            Name
+          </label>
+          <input
+            type='text'
+            className='w-full border border-[#BDA16B] px-2 py-1.5 bg-transparent'
+            placeholder='Enter your name'
+          />
+        </div>
+        <div className='mb-2 w-[250px]'>
+          <label htmlFor='phone' className='mb-1'>
+            Phone
+          </label>
+          <input
+            type='text'
+            className='w-full border border-[#BDA16B] px-2 py-1.5 bg-transparent'
+            placeholder='Enter your phone no.'
+          />
+        </div>
         <div className='mb-2'>
           <p className='text-xs text-[#1A1A1A] font-raleway font-medium uppercase mb-1'>
             Check in

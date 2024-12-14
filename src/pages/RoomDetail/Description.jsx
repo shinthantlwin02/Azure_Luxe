@@ -27,7 +27,7 @@ const Description = ({ room }) => {
           <h1 className='text-xl font-raleway font-medium text-[#1A1A1A] mb-2'>
             Description
           </h1>
-          <p className='text-sm font-raleway text-[#1A1A1A] mb-4'>
+          <p className='text-md font-raleway text-[#1A1A1A] mb-6'>
             {room.description}
           </p>
           <div className='flex items-center gap-4 mb-10'>
@@ -51,7 +51,7 @@ const Description = ({ room }) => {
             </div>
           </div>
         </div>
-        <hr className='border border-[#BDA16B] h-[250px]' />
+        <hr className='border border-[#BDA16B] h-[300px]' />
         <ReservationForm />
       </div>
     </div>

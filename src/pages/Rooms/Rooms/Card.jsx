@@ -11,10 +11,12 @@ const Card = ({ room }) => {
       />
       <div className='h-full w-full absolute top-0 px-3 py-6 bg-black/[.3] hover:bg-black/[.7] flex flex-col justify-between group transition-all delay-75 duration-1000'>
         <div className='opacity-0 group-hover:opacity-100 transition-opacity delay-75 duration-1000 flex items-center justify-center gap-2 h-full'>
-          <Button
-            text={'Book Now'}
-            className={'bg-[#BDA16B] rounded-none text-sm'}
-          />
+          <Link to={`/rooms/detail/${room.id}`}>
+            <Button
+              text={'Book Now'}
+              className={'bg-[#BDA16B] rounded-none text-sm'}
+            />
+          </Link>
           <Link
             to={`/rooms/detail/${room.id}`}
             className='text-white underline text-sm'

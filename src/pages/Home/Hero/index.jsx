@@ -237,10 +237,12 @@ const Hero = () => {
                 className='bg-transparent text-[#BDA16B] border border-[#BDA16B] text-sm font-raleway font-semibold uppercase'
               />
             </Link>
-            <Button
-              text='book now'
-              className='bg-[#BDA16B] text-[#0C2A44] text-sm font-raleway font-semibold uppercase'
-            />
+            <Link to={`/contact`}>
+              <Button
+                text='Contact us'
+                className='bg-[#BDA16B] text-[#0C2A44] text-sm font-raleway font-semibold uppercase'
+              />
+            </Link>
           </div>
 
           <ReservationBar />

@@ -20,9 +20,9 @@ const Navbar = () => {
               Contact
             </li>
           </Link>
-          <a href='/#services'>
+          <a href='#'>
             <li className={`text-[#BDA16B] font-medium text-sm uppercase`}>
-              Services
+              My Rooms
             </li>
           </a>
         </ul>
@@ -30,12 +30,16 @@ const Navbar = () => {
           <img src='/icons/logo.svg' />
         </div>
         <ul className='flex gap-10 items-center justify-end'>
-          <li className={`text-[#BDA16B] font-medium text-sm uppercase`}>
-            login
-          </li>
-          <li className={`text-[#BDA16B] font-medium text-sm uppercase`}>
-            sign up
-          </li>
+          <Link to={`/login`}>
+            <li className={`text-[#BDA16B] font-medium text-sm uppercase`}>
+              login
+            </li>
+          </Link>
+          <Link to={`/signup`}>
+            <li className={`text-[#BDA16B] font-medium text-sm uppercase`}>
+              sign up
+            </li>
+          </Link>
         </ul>
       </div>
     </div>

@@ -3,7 +3,7 @@ import Navbar from '../../../components/Navbar';
 
 const Hero = () => {
   return (
-    <div className="bg-[url('/images/hero-background.png')] h-screen">
+    <div className="bg-[url('/images/rooms-bg.png')] h-screen">
       <div className='bg-[#1E1E1E]/[.70] h-screen relative'>
         <Navbar />
         <div className='flex flex-col items-center justify-center h-full pt-20'>
