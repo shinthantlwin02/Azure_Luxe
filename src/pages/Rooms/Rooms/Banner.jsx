@@ -1,8 +1,8 @@
 import Button from '@/components/Button';
-import { rooms } from '@/data/data';
 
-const Banner = () => {
-  const room = rooms.find((room) => room.title === 'Superior Room');
+const Banner = ({rooms}) => {
+  const room = rooms?.find((room) => room?.id === 'da9b976c-c647-4b53-b060-0d23d6b24240');
+  console.log("rooms", rooms, "room", room)
   return (
     <div className='flex justify-between container mx-auto py-20'>
       <div className='w-[65%] pt-10'>
@@ -13,7 +13,7 @@ const Banner = () => {
         </div>
 
         <h1 className='font-cinzel text-5xl text-[#1A1A1A] mb-6'>
-          {room.title}
+          {room.roomName}
         </h1>
         <p className='font-raleway text-sm font-light text-[#1D1D1D] mb-8'>
           {room.description}
@@ -23,19 +23,19 @@ const Banner = () => {
           <div className='flex items-center gap-2'>
             <img src='/icons/bed.svg' />
             <p className='font-raleway text-xs text-[#1D1D1D]'>
-              {room.features.bed} Bed
+              {room.bedCount} Bed
             </p>
           </div>
           <div className='flex items-center gap-2'>
             <img src='/icons/area.svg' />
             <p className='font-raleway text-xs text-[#1D1D1D]'>
-              {room.features.area}
+              {room.areaInSqm}
             </p>
           </div>
           <div className='flex items-center gap-2'>
             <img src='/icons/bath.svg' />
             <p className='font-raleway text-xs text-[#1D1D1D]'>
-              {room.features.bathroom} Bathroom
+              {room.noOfBedRoom} Bathroom
             </p>
           </div>
         </div>
@@ -55,7 +55,7 @@ const Banner = () => {
         <div className='w-[350px] h-[400px] border-2 border-[#BDA16B] absolute top-0 right-0 '></div>
         <div className='w-[350px] h-[400px] absolute top-4 right-4 '>
           <img
-            src={room.img}
+            src={room.imageUrl}
             alt='room'
             className='w-full h-full object-cover object-left'
           />

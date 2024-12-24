@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Card = ({ room }) => {
   return (
-    <div className='w-[330px] h-[380px] object-cover relative'>
+    <div className='w-[30%] h-[380px] object-cover relative'>
       <img
-        src={room.img}
+        src={room.imageUrl}
         alt='room'
         className='absolute w-full h-full object-cover top-0'
       />
@@ -26,28 +26,28 @@ const Card = ({ room }) => {
         </div>
         <div>
           <p className='text-xs text-[#BDA16B] font-raleway font-semibold'>
-            {room.price} /night
+            {room.price} / {room.perDuration}
           </p>
           <h1 className='text-white font-raleway font-semibold text-lg mb-4'>
-            {room.title}
+            {room.roomName}
           </h1>
           <div className='flex flex-wrap items-center gap-2'>
             <div className='flex items-center gap-1'>
               <img src='/icons/bed.svg' />
               <p className='font-raleway text-xs text-white'>
-                {room.features.bed} Bed
+                {room.bedCount} Bed
               </p>
             </div>
             <div className='flex items-center gap-1'>
               <img src='/icons/area.svg' />
               <p className='font-raleway text-xs text-white'>
-                {room.features.area}
+                {room.areaInSqm} Sqm
               </p>
             </div>
             <div className='flex items-center gap-1'>
               <img src='/icons/bath.svg' />
               <p className='font-raleway text-xs text-white'>
-                {room.features.bathroom} Bathroom
+                {room.noOfBedRoom} Bathroom
               </p>
             </div>
           </div>

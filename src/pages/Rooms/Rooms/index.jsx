@@ -1,7 +1,7 @@
 import Banner from './Banner';
 import RoomList from './RoomList';
 
-const RoomsSection = () => {
+const RoomsSection = ({rooms}) => {
   return (
     <div className='py-20'>
       <header className='flex flex-col items-center'>
@@ -14,8 +14,8 @@ const RoomsSection = () => {
         </h1>
       </header>
 
-      <Banner />
-      <RoomList />
+      <Banner rooms={rooms}/>
+      <RoomList rooms={rooms}/>
     </div>
   );
 };
