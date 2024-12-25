@@ -8,7 +8,7 @@ const Amenities = ({ room }) => {
         Amentities
       </h1>
       <div className='flex flex-wrap items-center justify-center gap-12 max-w-[800px] mx-auto'>
-        {room?.amenities.map((data, index) => (
+        {room?.amenities?.map((data, index) => (
           <div key={index} className='flex flex-col items-center gap-3'>
             <img src={data.icon} alt='icon' className='w-12 h-12' />
             <p className='text-xs text-[#1A1A1A] font-raleway uppercase font-semibold'>

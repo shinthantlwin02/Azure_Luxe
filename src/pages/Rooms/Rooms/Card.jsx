@@ -1,7 +1,9 @@
 import Button from '@/components/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Card = ({ room }) => {
+
+  const router = useNavigate();
   return (
     <div className='w-[30%] h-[380px] object-cover relative'>
       <img
@@ -11,18 +13,21 @@ const Card = ({ room }) => {
       />
       <div className='h-full w-full absolute top-0 px-3 py-6 bg-black/[.3] hover:bg-black/[.7] flex flex-col justify-between group transition-all delay-75 duration-1000'>
         <div className='opacity-0 group-hover:opacity-100 transition-opacity delay-75 duration-1000 flex items-center justify-center gap-2 h-full'>
-          <Link to={`/rooms/detail/${room.id}`}>
             <Button
+            onClick={()=> router(`/rooms/detail/${room.id}`,{
+              state: {room}
+            })}
               text={'Book Now'}
               className={'bg-[#BDA16B] rounded-none text-sm'}
             />
-          </Link>
-          <Link
-            to={`/rooms/detail/${room.id}`}
+           <Button
+            onClick={()=> router(`/rooms/detail/${room.id}`,{
+              state: {room}
+            })}
             className='text-white underline text-sm'
           >
             View Details
-          </Link>
+          </Button>
         </div>
         <div>
           <p className='text-xs text-[#BDA16B] font-raleway font-semibold'>

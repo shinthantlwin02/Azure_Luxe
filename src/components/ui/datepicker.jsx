@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/popover';
 import Button from '../Button';
 
-export function DatePicker({className, placeholderClassName}) {
+export function DatePicker({className, placeholderClassName,onSelect}) {
   const [date, setDate] = React.useState();
 
   return (
@@ -33,7 +33,7 @@ export function DatePicker({className, placeholderClassName}) {
         <Calendar
           mode='single'
           selected={date}
-          onSelect={setDate}
+          onSelect={(date)=>console.log(date)}
           initialFocus
         />
       </PopoverContent>
