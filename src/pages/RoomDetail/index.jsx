@@ -12,8 +12,8 @@ const RoomDetail = () => {
   const [room, setRoom] = useState(null);
 
 useEffect(()=>{
-  if(location.state.room){
-     setRoom(location.state.room)
+  if(location.state?.room){
+     setRoom(location.state?.room)
   }
 },[location.state])
 

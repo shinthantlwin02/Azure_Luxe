@@ -57,7 +57,12 @@ const Navbar = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
           <DropdownMenuItem asChild >
-            <Button className='w-full' variant='outline' onClick={()=> {
+            <Link to='/dashboard'>
+            <Button className='w-full' variant='outline' >Dashboard</Button>
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild >
+            <Button className='w-full' variant='destructive' onClick={()=> {
               localStorage.removeItem('authToken')
               location.reload()
             }}>Logout</Button>

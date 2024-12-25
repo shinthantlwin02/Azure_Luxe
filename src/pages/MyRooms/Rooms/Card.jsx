@@ -2,6 +2,8 @@ import Button from '@/components/Button';
 import { Link } from 'react-router-dom';
 
 const Card = ({ room }) => {
+
+  
   return (
     <div className='w-[300px] h-[200px] object-cover relative rounded-sm'>
       <img

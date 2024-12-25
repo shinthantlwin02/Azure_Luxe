@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
 import Rooms from '@/pages/Rooms';
 import Login from '@/pages/Auth/Login';
@@ -11,12 +11,13 @@ import RoomsDashboard from '@/pages/Dashboard/pages/Rooms';
 import MyRooms from '@/pages/MyRooms';
 
 const ProtectedRoute = ({ children, role }) => {
-  const userRole = localStorage.getItem('userRole');
-  console.log('user role', userRole);
-  if (!userRole || userRole !== role) {
+  const userRole = localStorage.getItem('authToken');
+  // console.log('user role', userRole);
+  if (!userRole) {
     return <Navigate to='/login' replace />;
   }
-  return children;
+  return <Outlet/>
+  // return children;
 };
 
 const Paths = () => {
@@ -32,31 +33,11 @@ const Paths = () => {
       <Route path='/signup' element={<Signup />} />
 
       {/* Protected Route for Admin Dashboard */}
-      <Route
-        path='/dashboard'
-        element={
-          <ProtectedRoute role='admin'>
-            <Dashboard />
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path='/dashboard/reservations'
-        element={
-          <ProtectedRoute role='admin'>
-            <Reservations />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path='/dashboard/rooms'
-        element={
-          <ProtectedRoute role='admin'>
-            <RoomsDashboard />
-          </ProtectedRoute>
-        }
-      />
+      <Route path='/dashboard' element={<ProtectedRoute role='admin'/>}>
+        <Route index element={<Dashboard/>}/>
+        <Route path='reservations' element={<Reservations />}/>
+        <Route path='rooms' element={<RoomsDashboard />}/>
+      </Route>
     </Routes>
   );
 };

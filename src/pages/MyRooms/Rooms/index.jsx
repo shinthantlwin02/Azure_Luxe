@@ -12,7 +12,7 @@ const Rooms = () => {
   useEffect(()=>{
     (async()=>{
       const data = await fetchBookings()
-      setBookings(data._data.data)
+        setBookings(data?._data?.data)
     })()
   },[])
 
@@ -25,7 +25,6 @@ const Rooms = () => {
   return (
     <><div>
       {bookings?.map((booking, index) => {
-        console.log(booking)
         // const room = rooms.find((data) => data.id === booking.id)
         return (
           <div key={index} className="px-3 py-4 shadow-md rounded-sm my-4 flex items-center gap-4 w-full">
