@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Location = () => {
   return (
-    <div className='bg-[#1A1A1A] py-20'>
+    <div className='bg-[#1A1A1A] py-20 overflow-x-hidden'>
       <div className='flex items-center gap-20 pl-20'>
         <div>
           <h1 className='font-cinzel text-3xl text-[#D9D9D9] uppercase mb-4'>

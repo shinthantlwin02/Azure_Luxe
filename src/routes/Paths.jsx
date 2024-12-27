@@ -9,21 +9,24 @@ import Dashboard from '@/pages/Dashboard';
 import Reservations from '@/pages/Dashboard/pages/Reservations';
 import RoomsDashboard from '@/pages/Dashboard/pages/Rooms';
 import MyRooms from '@/pages/MyRooms';
+import NotFoundPage from '@/pages/NotFoundPage';
 
-const ProtectedRoute = ({ children, role }) => {
-  const userRole = localStorage.getItem('authToken');
-  // console.log('user role', userRole);
-  if (!userRole) {
-    return <Navigate to='/login' replace />;
+const ProtectedRoute = ({ role }) => {
+  const userRole = localStorage.getItem('userRole');
+  console.log('User role:', userRole);
+
+  if (userRole === role) {
+    return <Outlet />;
   }
-  return <Outlet/>
-  // return children;
+
+  return <Navigate to='/notFound' replace />;
 };
 
 const Paths = () => {
   return (
     <Routes>
       <Route index element={<Home />} />
+      <Route path='*' element={<NotFoundPage />} />
       <Route path='/rooms' element={<Rooms />} />
       <Route path='/rooms/detail/:id' element={<RoomDetail />} />
       <Route path='/contact' element={<Contact />} />
@@ -31,12 +34,13 @@ const Paths = () => {
 
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Signup />} />
+      <Route path='/notFound' element={<NotFoundPage />} />
 
       {/* Protected Route for Admin Dashboard */}
-      <Route path='/dashboard' element={<ProtectedRoute role='admin'/>}>
-        <Route index element={<Dashboard/>}/>
-        <Route path='reservations' element={<Reservations />}/>
-        <Route path='rooms' element={<RoomsDashboard />}/>
+      <Route path='/dashboard' element={<ProtectedRoute role='admin' />}>
+        <Route index element={<Dashboard />} />
+        <Route path='reservations' element={<Reservations />} />
+        <Route path='rooms' element={<RoomsDashboard />} />
       </Route>
     </Routes>
   );

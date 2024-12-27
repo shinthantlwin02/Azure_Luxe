@@ -38,17 +38,17 @@ const Login = () => {
           headers: { accept: '*/*' },
         }
       );
-
       const { token } = response.data._data;
-      console.log('data', response.data, 'token');
+      console.log('data', response.data);
       if (token) {
         localStorage.setItem('authToken', token);
+        localStorage.setItem('userRole', 'user');
+        nav('/');
       }
     } catch (err) {
       setError('Failed to log in. Please check your credentials.');
     } finally {
       setLoading(false);
-      nav('/');
     }
   };
 

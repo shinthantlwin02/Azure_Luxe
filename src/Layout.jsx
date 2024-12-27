@@ -6,7 +6,7 @@ import Sidebar from './components/Sidebar';
 
 const Layout = () => {
   const location = useLocation();
-  const excludePaths = ['/login', '/signup', '/dashboard'];
+  const excludePaths = ['/login', '/signup', '/dashboard', '/notFound'];
 
   const hideNavAndFooter = excludePaths.some((path) =>
     location.pathname.startsWith(path)
