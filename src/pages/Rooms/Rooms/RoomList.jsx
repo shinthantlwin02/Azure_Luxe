@@ -6,7 +6,6 @@ const RoomList = ({ rooms }) => {
       {rooms?.map((room, index) => (
         <Card key={index} room={room} />
       ))}
-      test
     </div>
   );
 };

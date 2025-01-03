@@ -1,4 +1,5 @@
 import Button from '@/components/Button';
+import DeleteModal from '@/components/DeleteModal';
 import { deleteRoom, fetchRooms } from '@/services/RoomService';
 import { Trash2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -7,6 +8,8 @@ const RoomList = () => {
   const [rooms, setRooms] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  console.log("rooms", rooms)
 
   useEffect(() => {
     const loadRooms = async () => {
@@ -87,9 +90,10 @@ const RoomList = () => {
                 />
               </td>
               <td>
-                <Button onClick={() => handleDelete(room.id)}>
+                {/* <Button onClick={() => handleDelete(room.id)}>
                   <Trash2 color='red' />
-                </Button>
+                </Button> */}
+                <DeleteModal handleDelete={() => handleDelete(room.id)}/>
               </td>
             </tr>
           ))}

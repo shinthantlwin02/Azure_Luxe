@@ -87,6 +87,8 @@ export function DialogComponent() {
     try {
       await createRoom(formData);
       setSuccess('Room created successfully!');
+      location.reload()
+
       setFormData({
         price: '',
         perDuration: '',

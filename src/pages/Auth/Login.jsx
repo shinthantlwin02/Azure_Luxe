@@ -4,6 +4,7 @@ import TextField from '@/components/TextField';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -43,7 +44,11 @@ const Login = () => {
       if (token) {
         localStorage.setItem('authToken', token);
         localStorage.setItem('userRole', 'user');
-        nav('/');
+        toast.success('Logged in successfully!');
+
+        setTimeout(() => {
+          nav('/');
+        }, 3000);
       }
     } catch (err) {
       setError('Failed to log in. Please check your credentials.');
@@ -88,10 +93,10 @@ const Login = () => {
 
           {error && <p className='text-red-500 text-sm'>{error}</p>}
 
-          <Button className='flex items-center gap-2 font-raleway bg-white border border-[#D4D4D4] w-full mb-3 text-sm rounded-none'>
+          {/* <Button className='flex items-center gap-2 font-raleway bg-white border border-[#D4D4D4] w-full mb-3 text-sm rounded-none'>
             <img src='/icons/google.svg' />
             Sign in with Google
-          </Button>
+          </Button> */}
           <Button
             text={loading ? 'Logging in...' : 'Sign In'}
             className='font-raleway bg-[#BDA16B] text-white w-full text-sm mb-6 rounded-none'

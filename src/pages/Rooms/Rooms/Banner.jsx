@@ -1,11 +1,11 @@
 import Button from '@/components/Button';
 
 const Banner = ({rooms}) => {
-  const room = rooms?.find((room) => room?.id === 'da9b976c-c647-4b53-b060-0d23d6b24240');
+  const room = rooms[0];
   console.log("rooms", rooms, "room", room)
   return (
-    <div className='flex justify-between container mx-auto py-20'>
-      <div className='w-[65%] pt-10'>
+    <div className='flex justify-between container mx-auto pt-20 pb-28'>
+      <div className='w-[65%] min-h-[400px] pt-10'>
         <div className='flex gap-1 mb-2'>
           {[...Array(5)].map((_, index) => (
             <img key={index} src='/icons/star.svg' alt='star' className='w-4' />

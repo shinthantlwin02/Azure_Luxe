@@ -1,26 +1,24 @@
 import { motion as m } from 'framer-motion';
 import './style.css';
 import { useEffect, useRef, useState } from 'react';
-import { reviews } from '@/data/data';
 import { getAllReview } from '@/services/ReviewService';
 
 const Reviews = () => {
   const [width, setWidth] = useState(0);
-  const [isError,setIsError] = useState(false)
-  const [isLoading,setIsLoading] = useState(false)
+  const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const [reviews,setReviews] = useState([])
-  useEffect(()=>{
-    (async()=>{
+  const [reviews, setReviews] = useState([]);
+  useEffect(() => {
+    (async () => {
       try {
-        const d = await getAllReview()
-        setReviews(d._data.data)
+        const d = await getAllReview();
+        setReviews(d._data.data);
       } catch (error) {
-        setIsError(true)
+        setIsError(true);
       }
-      
-    })()
-  },[])
+    })();
+  }, []);
   const carousel = useRef();
 
   useEffect(() => {
@@ -33,18 +31,22 @@ const Reviews = () => {
         <m.div
           drag='x'
           dragConstraints={{ right: 0, left: -width }}
-          className='inner-carousel flex gap-10'
+          className='inner-carousel flex'
         >
           {reviews.map((data, index) => {
             return (
               <m.div
                 key={index}
-                className='min-w-[400px] h-[200px] flex flex-col justify-between bg-white shadow-lg shadow-gray-300 rounded-2xl px-4 py-3 my-10'
+                className='min-w-[400px] h-[200px] flex flex-col justify-between bg-white shadow-lg shadow-gray-300 rounded-2xl px-4 py-3 my-10 mx-10'
               >
                 <div className='h-full overflow-hidden'>
-                  <h1 className='text-lg font-medium mb-2'>{data.user.email.split('@')[0]}</h1>
-                  <div className='h-full overflow-scroll'>
-                  <p className='text-sm font-light mb-4'>{data.content}</p>
+                  <h1 className='text-lg font-medium mb-2'>
+                    {data.user.email.split('@')[0]}
+                  </h1>
+                  <div className='h-full'>
+                    <p className='text-sm font-light mb-4 max-h-[85px] overflow-hidden'>
+                      {data.content}
+                    </p>
                   </div>
                 </div>
 

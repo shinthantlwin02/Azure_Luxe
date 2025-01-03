@@ -12,7 +12,7 @@ const Description = ({ room }) => {
           welcome to Azure luxe
         </p>
         <h1 className='font-cinzel text-[#1A1A1A] text-[28px] uppercase'>
-          {room?.title}
+          {room?.roomName}
         </h1>
       </header>
 
@@ -35,19 +35,19 @@ const Description = ({ room }) => {
             <div className='flex items-center gap-2'>
               <img src='/icons/bed.svg' className='w-4 h-4' />
               <p className='font-raleway text-sm text-[#1D1D1D]'>
-                {room?.features?.bed} Bed
+                {room?.bedCount} Bed
               </p>
             </div>
             <div className='flex items-center gap-2'>
               <img src='/icons/area.svg' className='w-4 h-4' />
               <p className='font-raleway text-sm text-[#1D1D1D]'>
-                {room?.features?.area}
+                {room?.areaInSqm} Sqm
               </p>
             </div>
             <div className='flex items-center gap-2'>
               <img src='/icons/bath.svg' className='w-4 h-4' />
               <p className='font-raleway text-sm text-[#1D1D1D]'>
-                {room?.features?.bathroom} Bathroom
+                {room?.noOfBedRoom} Bathroom
               </p>
             </div>
           </div>

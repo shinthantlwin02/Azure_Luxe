@@ -4,6 +4,7 @@ import TextField from '@/components/TextField';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Signup = () => {
   const nav = useNavigate();
@@ -45,8 +46,12 @@ const Signup = () => {
           accept: '*/*',
         },
       });
-      setSuccess('Account created successfully!');
-      nav('/login');
+
+      toast.success('Account created successfully!');
+
+      setTimeout(() => {
+        nav('/login');
+      }, 3000);
     } catch (err) {
       setError(
         err.response?.data?.message || 'An error occurred. Please try again.'
@@ -110,11 +115,7 @@ const Signup = () => {
               onChange={handleChange}
             />
           </div>
-          {error ? (
-            <p className='text-red-500 mb-4 text-center'>{error}</p>
-          ) : success ? (
-            <p className='text-green-500 mb-4 text-center'>{success}</p>
-          ) : null}
+          {error && <p className='text-red-500 mb-4 text-center'>{error}</p>}
 
           {/* <Button className='flex items-center gap-2 font-raleway bg-white border border-[#D4D4D4] w-full mb-3 text-sm rounded-none'>
             <img src='/icons/google.svg' alt='Google' />
