@@ -1,15 +1,14 @@
-import Button from '@/components/Button';
 import DeleteModal from '@/components/DeleteModal';
 import { deleteRoom, fetchRooms } from '@/services/RoomService';
-import { Trash2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 const RoomList = () => {
   const [rooms, setRooms] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  console.log("rooms", rooms)
+  console.log('rooms', rooms);
 
   useEffect(() => {
     const loadRooms = async () => {
@@ -29,6 +28,7 @@ const RoomList = () => {
   const handleDelete = async (roomId) => {
     try {
       await deleteRoom(roomId);
+      toast.success('deleted successfully');
       const updatedRooms = await fetchRooms();
       setRooms(updatedRooms._data.data);
     } catch (err) {
@@ -93,7 +93,7 @@ const RoomList = () => {
                 {/* <Button onClick={() => handleDelete(room.id)}>
                   <Trash2 color='red' />
                 </Button> */}
-                <DeleteModal handleDelete={() => handleDelete(room.id)}/>
+                <DeleteModal handleDelete={() => handleDelete(room.id)} />
               </td>
             </tr>
           ))}

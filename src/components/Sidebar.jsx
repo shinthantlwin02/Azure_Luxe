@@ -15,7 +15,7 @@ const Sidebar = () => {
             <Button text={'Dashboard'} className={`w-full mb-4 ${path == '/dashboard' ? 'bg-[#BDA16B] text-[#1A1A1A]' : 'bg-[#5B5B5B] text-[#D9D9D9]'}`} onClick={() => nav('/dashboard')}/>
             <Button text={'Reservations'} className={`w-full mb-4 ${path == '/dashboard/reservations' ? 'bg-[#BDA16B] text-[#1A1A1A]' : 'bg-[#5B5B5B] text-[#D9D9D9]'}`} onClick={() => nav('/dashboard/reservations')}/>
             <Button text={'Rooms'} className={`w-full mb-4 ${path == '/dashboard/rooms' ? 'bg-[#BDA16B] text-[#1A1A1A]' : 'bg-[#5B5B5B] text-[#D9D9D9]'}`} onClick={() => nav('/dashboard/rooms')}/>
-            {/* <Button text={'Guests'} className={`w-full mb-4 ${path == '/dashboard/guests' ? 'bg-[#BDA16B] text-[#1A1A1A]' : 'bg-[#5B5B5B] text-[#D9D9D9]'}`} onClick={() => nav('/dashboard/guests')}/> */}
+            <Button text={'Reviews'} className={`w-full mb-4 ${path == '/dashboard/reviews' ? 'bg-[#BDA16B] text-[#1A1A1A]' : 'bg-[#5B5B5B] text-[#D9D9D9]'}`} onClick={() => nav('/dashboard/reviews')}/>
         </div>
       </div>
     </div>

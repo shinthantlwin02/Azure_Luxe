@@ -26,7 +26,7 @@ export const fetchBookings = async () => {
       });
       return response.data; 
     } catch (error) {
-      console.error('Error fetching rooms:', error);
+      console.error('Error fetching bookings:', error);
       throw error; 
     }
   };
@@ -40,7 +40,19 @@ export const fetchBookings = async () => {
       toast.success('Booking Deleted!')
       return response.data; 
     } catch (error) {
-      console.error('Error fetching rooms:', error);
+      console.error('Error deleting booking:', error);
+      throw error; 
+    }
+  };
+
+  export const fetchAllBookings = async () => {
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/book/all-book`,{
+        headers: { Authorization: `Bearer ${localStorage.getItem('authToken')}` },
+      });
+      return response.data; 
+    } catch (error) {
+      console.error('Error fetching bookings:', error);
       throw error; 
     }
   };

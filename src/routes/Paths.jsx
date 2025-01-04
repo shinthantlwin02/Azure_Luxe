@@ -10,6 +10,7 @@ import Reservations from '@/pages/Dashboard/pages/Reservations';
 import RoomsDashboard from '@/pages/Dashboard/pages/Rooms';
 import MyRooms from '@/pages/MyRooms';
 import NotFoundPage from '@/pages/NotFoundPage';
+import Reviews from '@/pages/Dashboard/pages/Reviews';
 
 const ProtectedRoute = ({ role }) => {
   const userRole = localStorage.getItem('userRole');
@@ -40,6 +41,7 @@ const Paths = () => {
       <Route path='/dashboard' element={<ProtectedRoute role='admin' />}>
         <Route index element={<Dashboard />} />
         <Route path='reservations' element={<Reservations />} />
+        <Route path='reviews' element={<Reviews />} />
         <Route path='rooms' element={<RoomsDashboard />} />
       </Route>
     </Routes>

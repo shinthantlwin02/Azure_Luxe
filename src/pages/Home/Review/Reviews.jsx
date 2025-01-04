@@ -6,7 +6,7 @@ import { getAllReview } from '@/services/ReviewService';
 const Reviews = () => {
   const [width, setWidth] = useState(0);
   const [isError, setIsError] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
 
   const [reviews, setReviews] = useState([]);
   useEffect(() => {

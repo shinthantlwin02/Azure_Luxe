@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 //     TableRow,
 //   } from "@/components/ui/table"
 import ContentLayout from '@/layouts/admin/ContentLayout';
-import { deleteBooking, fetchBookings } from '@/services/BookingService';
+import { deleteBooking, fetchAllBookings } from '@/services/BookingService';
 import * as dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
 
@@ -64,7 +64,7 @@ export default function Reservations() {
 
   useEffect(() => {
     (async () => {
-      const data = await fetchBookings();
+      const data = await fetchAllBookings();
       setBookings(data._data.data);
     })();
   }, []);
