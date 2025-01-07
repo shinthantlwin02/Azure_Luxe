@@ -31,7 +31,7 @@ const Paths = () => {
       <Route path='/rooms' element={<Rooms />} />
       <Route path='/rooms/detail/:id' element={<RoomDetail />} />
       <Route path='/contact' element={<Contact />} />
-      <Route path='/bookings' element={<MyRooms />} />
+      <Route path='/my-rooms' element={<MyRooms />} />
 
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Signup />} />

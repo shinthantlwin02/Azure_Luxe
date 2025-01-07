@@ -39,7 +39,7 @@ const Navbar = () => {
               Contact
             </li>
           </Link>
-          <a href={`/bookings`}>
+          <a href={`/my-rooms`}>
             <li className={`text-[#BDA16B] font-medium text-sm uppercase`}>
               My Rooms
             </li>
