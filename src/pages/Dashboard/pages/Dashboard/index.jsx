@@ -1,4 +1,4 @@
-import { fetchBookings } from '@/services/BookingService';
+import { fetchAllBookings } from '@/services/BookingService';
 import { fetchRooms } from '@/services/RoomService';
 import { useEffect, useState } from 'react';
 
@@ -8,7 +8,7 @@ const DashboardPage = () => {
 
   useEffect(() => {
     (async () => {
-      const data = await fetchBookings();
+      const data = await fetchAllBookings();
       setBookings(data?._data?.data);
     })();
   }, []);
@@ -31,7 +31,8 @@ const DashboardPage = () => {
           Total Reservations
         </h1>
         <p className='text-sm text-[#7D7D7D] font-raleway font-semibold'>
-          Number of Reservations: <span className='text-[#1A1A1A]'>{bookings?.length}</span>
+          Number of Reservations:{' '}
+          <span className='text-[#1A1A1A]'>{bookings?.length}</span>
         </p>
       </div>
       <div className='w-full p-4 rounded-md shadow-md mb-4'>

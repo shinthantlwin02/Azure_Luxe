@@ -1,3 +1,4 @@
+import DeleteModal from '@/components/DeleteModal';
 import { Button } from '@/components/ui/button';
 // import {
 //     Table,
@@ -10,9 +11,15 @@ import { Button } from '@/components/ui/button';
 //     TableRow,
 //   } from "@/components/ui/table"
 import ContentLayout from '@/layouts/admin/ContentLayout';
-import { deleteBooking, fetchAllBookings } from '@/services/BookingService';
+import {
+  deleteBooking,
+  fetchAllBookings,
+  updateBookingStatus,
+} from '@/services/BookingService';
 import * as dayjs from 'dayjs';
+import { Trash } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 // const invoices = [
 //   {
@@ -61,17 +68,26 @@ import { useEffect, useState } from 'react';
 
 export default function Reservations() {
   const [bookings, setBookings] = useState();
+  console.log('bookings', bookings);
 
   useEffect(() => {
     (async () => {
       const data = await fetchAllBookings();
       setBookings(data._data.data);
     })();
-  }, []);
+  }, [bookings]);
+
+  const handleDeleteBooking = async (id) => {
+    await deleteBooking(id);
+    toast.success('Deleted successfully');
+  };
+
+  const approveBooking = async (id) => {
+    await updateBookingStatus(id, 'APPROVED');
+  };
 
   const cancelBooking = async (id) => {
-    await deleteBooking(id);
-    location.reload();
+    await updateBookingStatus(id, 'CANCELLED');
   };
 
   return (
@@ -119,13 +135,39 @@ export default function Reservations() {
               </td>
 
               <td>
-                <Button
-                  onClick={() => cancelBooking(booking.id)}
-                  size={'sm'}
-                  variant='destructive'
-                >
-                  Cancel
-                </Button>
+                {booking?.status === 'PENDING' ? (
+                  <div className='flex items-center justify-center gap-4 py-2 my-2'>
+                    <Button
+                      onClick={() => approveBooking(booking.id)}
+                      size={'sm'}
+                      className='bg-[#BDA16B] hover:bg-[#BDA16B] text-[#1A1A1A] text-sm'
+                    >
+                      Approve
+                    </Button>
+                    <Button
+                      onClick={() => cancelBooking(booking.id)}
+                      size={'sm'}
+                      variant='destructive'
+                    >
+                      Cancel
+                    </Button>
+                  </div>
+                ) : (
+                  <p
+                    className={`${
+                      booking?.status === 'APPROVED'
+                        ? 'text-green-500'
+                        : 'text-red-500'
+                    }`}
+                  >
+                    {booking?.status}
+                  </p>
+                )}
+              </td>
+              <td>
+                <DeleteModal
+                  handleDelete={() => handleDeleteBooking(booking?.id)}
+                />
               </td>
             </tr>
           ))}

@@ -1,7 +1,10 @@
 import Button from '@/components/Button';
 import * as dayjs from 'dayjs';
+import { CircleCheck } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-const Card = ({ booking, cancelBooking }) => {
+const Card = ({ booking }) => {
+  const nav = useNavigate();
   return (
     <div className='px-4 py-6 shadow-md rounded-md my-4 flex items-center gap-4 w-full bg-white'>
       <div className='flex items-center gap-10 w-full'>
@@ -43,6 +46,20 @@ const Card = ({ booking, cancelBooking }) => {
           </div>
         </div>
         <div className='w-full'>
+          <div className='flex items-center justify-end mb-6'>
+            {booking?.status === 'APPROVED' && <CircleCheck color='green' />}
+            <p
+              className={`${
+                booking?.status === 'APPROVED'
+                  ? 'text-green-500'
+                  : booking?.status === 'CANCELLED'
+                  ? 'text-red-500'
+                  : 'text-yellow-700'
+              } font-semibold text-sm`}
+            >
+              {booking?.status}
+            </p>
+          </div>
           <div className='flex items-center w-full justify-between mb-4'>
             <div className='flex flex-col items-center'>
               <h1 className='text-[#BDA16B] text-md font-raleway font-semibold mb-2'>
@@ -75,7 +92,7 @@ const Card = ({ booking, cancelBooking }) => {
                 Check in
               </h1>
               <p className='text-[#BDA16B] text-sm font-raleway mb-2'>
-                {dayjs(booking.checkInDate).format('DD/MM/YYYY h:mm A ')}
+                {dayjs(booking.checkInDate).format('DD/MM/YYYY')}
               </p>
             </div>
             <div className='flex flex-col items-center'>
@@ -83,21 +100,16 @@ const Card = ({ booking, cancelBooking }) => {
                 Check out
               </h1>
               <p className='text-[#BDA16B] text-sm font-raleway mb-2'>
-                {dayjs(booking.checkOutDate).format('DD/MM/YYYY h:mm A ')}
+                {dayjs(booking.checkOutDate).format('DD/MM/YYYY')}
               </p>
             </div>
           </div>
 
           <div className='flex items-center gap-4 ml-auto'>
+            
             <Button
-              onClick={() => cancelBooking(booking.id)}
-              className={'bg-[#BDA16B] text-white'}
-            >
-              Cancel
-            </Button>
-            <Button
-              onClick={() => cancelBooking(booking.id)}
-              className={'bg-white border border-[#BDA16B] text-[#BDA16B]'}
+              onClick={() => nav('/rooms')}
+              className={'bg-[#BDA16B] text-white text-sm font-semibold'}
             >
               View Rooms
             </Button>

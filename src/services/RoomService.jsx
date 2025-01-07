@@ -48,3 +48,4 @@ export const getRoomById = async (roomId) => {
     throw error;
   }
 };
+

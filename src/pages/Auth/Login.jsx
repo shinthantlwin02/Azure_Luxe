@@ -14,7 +14,7 @@ const Login = () => {
   const nav = useNavigate();
 
   // Hardcoded credentials
-  const ADMIN_EMAIL = 'admin@gmail.com';
+  const ADMIN_EMAIL = 'admin123@gmail.com';
   const ADMIN_PASSWORD = 'admin123';
 
   const handleLogin = async (e) => {
@@ -22,13 +22,13 @@ const Login = () => {
     setLoading(true);
     setError('');
 
-    if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
-      localStorage.setItem('authToken', 'hardcoded-admin-token');
-      localStorage.setItem('userRole', 'admin');
-      setLoading(false);
-      nav('/dashboard');
-      return;
-    }
+    // if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+    //   localStorage.setItem('authToken', 'hardcoded-admin-token');
+    //   localStorage.setItem('userRole', 'admin');
+    //   setLoading(false);
+    //   nav('/dashboard');
+    //   return;
+    // }
 
     try {
       const response = await axios.post(
@@ -43,12 +43,20 @@ const Login = () => {
       console.log('data', response.data);
       if (token) {
         localStorage.setItem('authToken', token);
-        localStorage.setItem('userRole', 'user');
-        toast.success('Logged in successfully!');
+        if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+          localStorage.setItem('userRole', 'admin');
+          setTimeout(() => {
+            nav('/dashboard');
+          }, 2000);
+        } else {
+          localStorage.setItem('userRole', 'user');
+          setTimeout(() => {
+            nav('/');
+          }, 2000);
+        }
+        setLoading(false);
 
-        setTimeout(() => {
-          nav('/');
-        }, 3000);
+        toast.success('Logged in successfully!');
       }
     } catch (err) {
       setError('Failed to log in. Please check your credentials.');

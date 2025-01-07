@@ -24,7 +24,7 @@ const Rooms = () => {
     loadRooms();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className='bg-[#1A1A1A] w-full h-screen flex items-center justify-center'>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
   return (
     <div>

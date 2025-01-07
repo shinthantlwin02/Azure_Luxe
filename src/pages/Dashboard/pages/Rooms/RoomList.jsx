@@ -1,3 +1,4 @@
+import Button from '@/components/Button';
 import DeleteModal from '@/components/DeleteModal';
 import { deleteRoom, fetchRooms } from '@/services/RoomService';
 import { useEffect, useState } from 'react';
@@ -23,7 +24,7 @@ const RoomList = () => {
     };
 
     loadRooms();
-  }, []);
+  }, [rooms]);
 
   const handleDelete = async (roomId) => {
     try {
@@ -39,7 +40,7 @@ const RoomList = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
   return (
-    <table className='w-full border-separate border-spacing-y-6'>
+    <table className='table-auto w-full border-separate border-spacing-y-6'>
       <thead>
         <tr className='bg-white shadow-md rounded-md mb-10'>
           <th className='text-start text-base pr-2 font-semibold text-[#1A1A1A] px-3 py-2 my-2'>
@@ -67,10 +68,10 @@ const RoomList = () => {
         {rooms &&
           rooms.map((room, index) => (
             <tr key={index} className='bg-white shadow-md rounded-md'>
-              <td className='text-base font-regular text-[#1A1A1A] px-3 py-2 my-2'>
+              <td className='text-base font-regular text-[#1A1A1A] px-3 py-2 my-2 max-w-[80px]'>
                 {room.roomName}
               </td>
-              <td className='text-sm font-regular text-[#1A1A1A] px-3 py-2 my-2'>
+              <td className='text-sm font-regular text-[#1A1A1A] px-3 py-2 my-2 max-w-[150px]'>
                 {room.id}
               </td>
               <td className='text-base font-regular text-[#1A1A1A] px-3 py-2 my-2'>
@@ -89,10 +90,8 @@ const RoomList = () => {
                   className='w-10 h-8 object-cover'
                 />
               </td>
+
               <td>
-                {/* <Button onClick={() => handleDelete(room.id)}>
-                  <Trash2 color='red' />
-                </Button> */}
                 <DeleteModal handleDelete={() => handleDelete(room.id)} />
               </td>
             </tr>

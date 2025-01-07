@@ -27,20 +27,20 @@ const Reviews = () => {
             className='max-w-[950px] bg-white shadow-lg shadow-gray-300 rounded-2xl px-4 py-3 my-10'
           >
             <div className='h-full '>
+              <div className='flex items-center gap-2 mb-3'>
+                {[...Array(data.rating)].map((index) => (
+                  <Star key={index} color='#BDA16B' fill='#BDA16B' size={14} />
+                ))}
+              </div>
               <h1 className='text-lg font-medium mb-2'>
                 {data.user.email.split('@')[0]}
               </h1>
+
               <div className='h-full'>
                 <p className='text-sm font-light mb-4 max-h-[85px] '>
                   {data.content}
                 </p>
               </div>
-            </div>
-
-            <div className='flex items-center justify-end gap-2 me-3'>
-              {[...Array(data.rating)].map((index) => (
-                <Star key={index} color='#BDA16B' />
-              ))}
             </div>
           </div>
         );
